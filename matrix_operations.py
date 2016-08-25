@@ -3,25 +3,28 @@ class Matrix(object):
     def __init__(self):
         pass
 
-    def create_matrix(self, arguments):
-        arguments = str(arguments)
-        # i am assuming its a 2*3 matrix
-        if arguments.find(";"):
-            arguments.replace("[", "")
-            arguments.replace("]", "")
-            a, b = arguments.split(";")
-            return a, b
-            
-        else:
-                # if its just a list being passed
-            arguments.replace("[", "")
-            arguments.replace("]", "")
-            return arguments
+    def create_matrix(self, list1):
+        # i assuming all inputs will be separated by commas
+        # take element starting from one after opening bracket and the last
+        # before closing bracket
+        list2 = [list1[1:len(list1) - 1]]
+        # collect elements separated by semicolon
+        list3 = list2.split(";")
+        if len(list3) == 1:
+        	element = list3[0]
+        	element.replace(",", " ")
+        	print element
+         else:
+        	for element in list3:
+        		# replace commas with spaces
+            	element.replace(",", " ")
+            	print element
 
     def create_vector(self, zeros, columns):
         pass
 
-    def add_matrix(self, number):
+    def add_matrix(self, number, number2):
+
         pass
 
     def transpose_matrix(self, matrix):
