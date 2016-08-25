@@ -26,5 +26,11 @@ def main():
         elif text in variables.keys():
             print variables[text].data
 
+        elif "\'" in text:
+            print variables[text[0]].transpose_matrix()
+
+
+
+
 if __name__ == '__main__':
     main()
