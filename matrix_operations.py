@@ -2,7 +2,7 @@ class Matrix(object):
 
     def __init__(self, list1):
 
-        data = []
+        self.data = []
         # i assuming all inputs will be separated by commas
         # take element starting from one after opening bracket and the last
         # before closing bracket
@@ -18,7 +18,7 @@ class Matrix(object):
             # element3 is a list of matrix
             element3 = map(int, element1)
             # appending element3 to data to make it a list of list
-            data.append(element3)
+            self.data.append(element3)
 
         else:
             for element in list3:
@@ -26,7 +26,7 @@ class Matrix(object):
                 element1 = element.split(",")
                 # element3 is a list of matrix
                 element3 = map(int, element1)
-                data.append(element3)
+                self.ddata.append(element3)
 
     def create_zeros(self, rows, columns):
 
@@ -40,13 +40,15 @@ class Matrix(object):
         result = map(add_constant, self.data)
         return result
 
-    def transpose_matrix(self, thematrix):
-        return zip(*thematrix)
+    def transpose_matrix(self):
+        # map the matrices to create a list of tuples
+        transposed_matrix = []
+        for item in zip(*self.data):
+            transposed_matrix.append(list(item))
+        return transposed_matrix
 
     def concatenate_matrix(self, matrix):
         pass
 
     def find_inverse(self, original):
         pass
-
-
