@@ -11,6 +11,7 @@ class Matrix(object):
             arguments.replace("]", "")
             a, b = arguments.split(";")
             return a, b
+            
         else:
                 # if its just a list being passed
             arguments.replace("[", "")
