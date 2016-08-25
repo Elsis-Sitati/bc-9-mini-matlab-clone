@@ -34,11 +34,11 @@ class Matrix(object):
 
     def add_matrix(self, number):
         # fuction for adding
-        def add_constant(data, number):
-            return data + number
-        # using the function in every element in data store
-        result = map(add_constant, self.data)
-        return result
+        for row in range(len(self.data)):
+            for items in range(len(self.data[row])):
+                self.data[row][items] += number
+
+        return self.data
 
     def transpose_matrix(self):
         # map the matrices to create a list of tuples
