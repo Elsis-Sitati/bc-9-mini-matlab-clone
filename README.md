@@ -5,6 +5,9 @@
 Mini matlab clone is a minified version of Matlab.This is python console application that can perform some arithmetic operations.
 It has the following features:
 * Converting input given into matrices
+
+          a = [1,2,3,4]
+          b = [123;456]
 * Adding matrices
 * Transposing a matrice
 * Generating matrices with zeros as elements
