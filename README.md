@@ -8,9 +8,18 @@ It has the following features:
 
           a = [1,2,3,4]
           b = [123;456]
+* Storing and displaying content in the matrix
+
+          a
 * Adding matrices
+
+          a + 10
 * Transposing a matrice
+ 
+          a'
 * Generating matrices with zeros as elements
+
+          zeros(5,1)
 
 #Dependencies
 
