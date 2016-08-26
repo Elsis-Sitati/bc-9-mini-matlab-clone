@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 from prompt_toolkit import prompt
 from prompt_toolkit.history import InMemoryHistory
 from matrix_operations import Matrix
-
+import pickle
 variables = {}
 
 
@@ -45,6 +45,13 @@ def main():
                     print "0 \t",
                 # outer loop
                 print "\n"
+
+        elif "," in text:
+            a = Matrix()
+            b = int(text[-2])
+            matrix = Matrix()
+            concat = matrix.concatenate_horizontaly(a, b)
+            print concat
 
 
 if __name__ == '__main__':
