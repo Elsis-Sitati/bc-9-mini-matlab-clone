@@ -28,35 +28,42 @@ class Matrix(object):
                 element3 = map(int, element1)
                 self.data.append(element3)
 
-
     def add_matrix(self, number):
-        # fuction for adding
+        '''function for adding '''
+        # loop through the throughs
         for row in range(len(self.data)):
+            # loop through each item in the row
             for items in range(len(self.data[row])):
+                # access each time in the row and then add the constant
                 self.data[row][items] += number
 
         return self.data
 
     def transpose_matrix(self):
-        # map the matrices to create a list of tuples
+        ''' map the matrices to create a list of tuples'''
+
         transposed_matrix = []
+        # getting a list of tuples that have been transposed
         for item in zip(*self.data):
+            # converting each tuple into a list and storing them in
+            # transposed_matrix
             transposed_matrix.append(list(item))
         return transposed_matrix
 
-    def concatenate_horizontaly(self, matrix):
-        # getting indexes for elements in self.data list
-        for i in range(len(self.data)):
-            self.data[i] = self.data.extend(matrix[i])
+    def concatenate_horizontaly(self, a, b):
+        '''method to return horizontal concatenation of matrices'''
+        # going through the rows in the list
+        for i in range(len(a)):
+            # add a matching row  number from the other matrix to the rows
+            a[i] = self.data.extend(b[i])
         return self.data
 
     def contacatenate_vertically(self, matrix):
-        # getting indexes for elements in self.data list
+        # going through the rows in the list
         for i in range(len(self.data)):
+            # adding rows to the last element in the row
             self.data[i + len(self.data)] = matrix[i]
         return self.data
-
-
 
     def find_inverse(self, original):
         pass
