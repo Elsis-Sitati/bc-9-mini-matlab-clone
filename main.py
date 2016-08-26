@@ -23,16 +23,20 @@ def main():
             # putting data to variables dictionary
             variables[container[0].strip()] = Matrix(container[1].strip())
 
+        # printing a variable that has been assigned
         elif text in variables.keys():
             print variables[text].data
 
+        # printing a transpose
         elif "\'" in text:
             print variables[text[0]].transpose_matrix()
 
+        # printing the result of an addition
         elif "+" in text:
             container = text.split("+")
             print variables[container[0].strip()].add_matrix(int(container[1].strip()))
 
+        # printing a matrix that has zeros
         elif "zeros" in text:
             # find value for column in string and convert it to an integer
             columns = int(text[-2])
