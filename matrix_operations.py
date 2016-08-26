@@ -26,11 +26,8 @@ class Matrix(object):
                 element1 = element.split(",")
                 # element3 is a list of matrix
                 element3 = map(int, element1)
-                self.ddata.append(element3)
+                self.data.append(element3)
 
-    def create_zeros(self, rows, columns):
-
-        pass
 
     def add_matrix(self, number):
         # fuction for adding
@@ -47,8 +44,19 @@ class Matrix(object):
             transposed_matrix.append(list(item))
         return transposed_matrix
 
-    def concatenate_matrix(self, matrix):
-        pass
+    def concatenate_horizontaly(self, matrix):
+        # getting indexes for elements in self.data list
+        for i in range(len(self.data)):
+            self.data[i] = self.data.extend(matrix[i])
+        return self.data
+
+    def contacatenate_vertically(self, matrix):
+        # getting indexes for elements in self.data list
+        for i in range(len(self.data)):
+            self.data[i + len(self.data)] = matrix[i]
+        return self.data
+
+
 
     def find_inverse(self, original):
         pass
