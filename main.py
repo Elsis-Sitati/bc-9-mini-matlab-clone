@@ -42,7 +42,7 @@ def main():
             for row in range(rows):
                 # loop through the column
                 for col in range(columns):
-                    print "0 \t"
+                    print "0 \t",
                 # outer loop
                 print "\n"
 
